@@ -41,13 +41,13 @@ public class SlidingWindow {
 	}
 
 	public static int getMaxPerformanceSum(int[] performanceScores, int[] activationStatus, int k) {
-		int length = performanceScores.length;
+		int n = performanceScores.length;
 
 		// Calculate the current active performance score
 		int currentActiveScore = 0;
 		// Calculate the performance contribution for inactive servers
-		int[] inactiveScores = new int[length];
-		for (int i = 0; i < length; i++) {
+		int[] inactiveScores = new int[n];
+		for (int i = 0; i < n; i++) {
 			if (activationStatus[i] == 1) {
 				currentActiveScore += performanceScores[i];
 			}
@@ -60,7 +60,7 @@ public class SlidingWindow {
 		int maxInactiveSum = 0, windowSum = 0;
 
 		// Sliding window technique
-		for (int i = 0; i < length; i++) {
+		for (int i = 0; i < n; i++) {
 			windowSum += inactiveScores[i];
 			if (i >= k) {
 				windowSum -= inactiveScores[i - k];

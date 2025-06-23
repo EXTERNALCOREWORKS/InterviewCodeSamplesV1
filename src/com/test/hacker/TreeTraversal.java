@@ -72,7 +72,7 @@ public class TreeTraversal {
         tt.postOrderTraversal(root);  // Output: 4 5 2 6 7 3 1
         
         System.out.println("\n Breadth First Search: ");
-        tt.breadthFirstSearchTraversal(root);  // Output: 4 5 2 6 7 3 1
+        tt.breadthFirstSearchTraversal(root);  // Output: 1 2 3 4 5 6 7
     }
 }
 
